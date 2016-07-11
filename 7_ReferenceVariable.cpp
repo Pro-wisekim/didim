@@ -1,6 +1,32 @@
 #include <iostream>
 using namespace std;
+//오버로딩 문제
+int Add(int &r1, int &r2);
+int Add(int i, int j);
 
+int main()
+{
+  int re = Add(2,3);
+  cout<<"re: "<<re<<endl;
+
+  int a=2, b=3;
+  re = Add(a,b);
+  cout<<"re:"<<re<<endl;
+  
+  return 0;
+}
+int Add(int &r1, int &r2)
+{
+  return r1+r2;
+}
+int Add(int i, int j)
+{
+  return i+j;
+}
+
+
+/*
+//참조 변수의 바뀜
 int &CalSum(int s, int e);
 int main(void)
 {
@@ -21,6 +47,9 @@ int &CalSum(int s, int e)
   cout<<sum<<endl;
   return sum;
 }
+*/
+
+
 /*
 
 int main(void)
